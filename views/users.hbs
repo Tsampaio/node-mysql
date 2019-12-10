@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/users">all users</a></li>
+            <li><a href="/">Home</a></li>
+        </ul>
+    </nav>
+    {{#each data}}
+    <h1>Name: {{this.name}} Email: {{this.email}}</h1>
+    <form action="/edit/{{this.id}}" method="put">
+        <button>Edit</button>
+    </form>
+    {{/each}}
+</body>
+
+</html>
